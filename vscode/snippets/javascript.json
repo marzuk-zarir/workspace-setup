@@ -1,0 +1,65 @@
+{
+	"Header Info": {
+		"prefix": "header_info",
+		"body": [
+		  "/**",
+		  " * Title: ${1}",
+		  " * Description: ${2}",
+		  " * Author: Marzuk Zarir",
+		  " * Date: $CURRENT_DATE-$CURRENT_MONTH-$CURRENT_YEAR",
+		  " *",
+		  " */"
+		],
+		"description": "header information with author name, title and description"
+	},
+
+	"CommonJS Import": {
+		"prefix": "req",
+		"body": [
+		  "const { ${2} } = require(${1})"
+		],
+		"description": "CommonJS Import"
+	},
+	"Basic expressjs server": {
+		"prefix": "express-server",
+		"body": [
+		  "const express = require('express')",
+		  "const app = express()",
+		  "const port = process.env.PORT || ${1}",
+		  "",
+		  "app.use(${2})",
+		  "app.get('/', (req, res) => {",
+		  "\tres.send('Hello Express')",
+		  "})",
+		  "",
+		  "app.listen(port, () => {",
+		  "\tconsole.log(`Server listening on port \\${port\\}`)",
+		  "})",
+		  ""
+		],
+		"description": "Basic expressjs server"
+	  },
+	  "Express Routing": {
+		"prefix": "express-route",
+		"body": [
+		  "app.${1:method}('${2:url}', (req,res) => {",
+		  "\tres.send($3)",
+		  "})"
+		],
+		"description": "Express Routing"
+	  },
+	  "Express Router": {
+		"prefix": "express-router",
+		"body": [
+			"const express = require('express')",
+			"const ${1:router_name} = express.Router()",
+			"",
+			"${1}.${2:method}('/${3:url}', (req, res) => {",
+			"\tres.send('Hello express')",
+			"})",
+			"",
+			"modules.exports = ${1}"
+		],
+		"description": "Express Router"
+	  }
+}

@@ -1,0 +1,226 @@
+/**
+ * Title: User Settings 😎
+ * Description: Vscode custom settings for brtter developer experience 🔨🔨
+ * Author: Marzuk Zarir
+ * Last Modified Date: 27-07-21
+ *
+ */
+{
+    /*==============================
+        Editor Settings
+    ==============================*/
+
+    // Startup Editor
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+
+    // Font Size, Family, Line-height
+    "editor.fontFamily": "'Operator Mono lig','Hack','Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": 350,
+    "editor.fontSize": 19,
+    "editor.lineHeight": 24,
+
+    // Italic Scope
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+
+    // Integrated Terminal Profile and Other Config
+    "terminal.integrated.fontFamily": "'MesloLGS NF', monospace",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontWeight": 300,
+    "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorWidth": 3,
+    // Terminal profile for windows 10 and wsl
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "GitBash": {
+            "path": "E:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["--login"],
+            "icon": "terminal-bash"
+        },
+        "Ubuntu(wsl)": {
+            "path": "C:\\Windows\\System32\\wsl.exe",
+            "args": ["-d", "Ubuntu-20.04"],
+            "icon": "terminal-ubuntu"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Ubuntu(wsl)",
+
+    // Debug Console Profile
+    "debug.console.fontFamily": "'JetBrains Mono'",
+    "debug.console.fontSize": 15,
+
+    // Color Customization
+    "workbench.colorCustomizations": {
+        "terminal.ansiBlue": "#4DB1FF",
+        "statusBar.background": "#3066be",
+        "editorCursor.foreground": "#fff",
+        "terminal.background": "#171717"
+    },
+
+    // Explorer
+    "workbench.editor.enablePreview": false,
+    "explorer.confirmDelete": false,
+
+    // Mouse & Cursor
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.mouseWheelZoom": true,
+
+    // Wordwrap & Breadcrumb
+    "editor.wordWrap": "on",
+    "breadcrumbs.enabled": false,
+
+    // Minimap, Drag'n Drop
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+
+    // Code Suggestion
+    "editor.suggestSelection": "first",
+
+    // Line Number Glyphmargin
+    "editor.glyphMargin": false,
+
+    // Vertical & Horizontal Scrollbar
+    "editor.scrollbar.verticalScrollbarSize": 10,
+    "editor.scrollbar.horizontalScrollbarSize": 10,
+
+    // Suggestion on snipet any tab stop (most important settings)
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+    // Security check ot open folder
+    "security.workspace.trust.enabled": false,
+
+    // Check update code
+    "update.mode": "none",
+
+    /*==============================
+        Linter & Formatter
+    ==============================*/
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
+
+    // Prettier
+    "prettier.arrowParens": "always",
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "prettier.printWidth": 90,
+
+    // Beautify
+    "beautify.language": {
+        "html": ["html", "ejs"],
+        "css": ["css", "scss", "sass"]
+    },
+
+    /*==============================
+        Language Features
+    ==============================*/
+
+    // HTML
+    "html.format.templating": true,
+    "html.hover.references": false,
+    "html.autoClosingTags": false,
+
+    // JavaScript
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+        "editor.renderIndentGuides": false
+    },
+
+    // Git
+    "git.ignoreMissingGitWarning": true,
+
+    /*==============================
+        Extension Settings
+    ==============================*/
+
+    // EMMET
+    "emmet.triggerExpansionOnTab": true,
+
+    // Material Icon Theme
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.folders.color": "#72CFFB",
+
+    // Setting Sync
+    "sync.gist": "06d28656f317e5748ed44032e1d70bed",
+
+    // LiveServer
+    "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    // HTML-CSS-Class-Completion
+    "html-css-class-completion.enableEmmetSupport": true,
+    "html-css-class-completion.CSSLanguages": ["css", "sass", "scss", "less"],
+    "html-css-class-completion.HTMLLanguages": [
+        "html",
+        "handlebars",
+        "ejs",
+        "svelte",
+        "jade"
+    ],
+    "html-css-class-completion.JavaScriptLanguages": [
+        "javascriptreact",
+        "typescriptreact"
+    ],
+
+    // HTMLHint Options
+    "htmlhint.options": {
+        "tagname-lowercase": true,
+        "attr-lowercase": true,
+        "attr-value-double-quotes": true,
+        "doctype-first": true,
+        "tag-pair": true,
+        "spec-char-escape": false,
+        "id-unique": true,
+        "src-not-empty": true,
+        "attr-no-duplication": true,
+        "title-require": true
+    },
+
+    // Live Sass Compiler
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "/styles/css"
+        }
+    ],
+
+    // Code Runner
+    "code-runner.clearPreviousOutput": true,
+
+    // Cspell Checker
+    "cSpell.logLevel": "Information",
+
+    /*==============================
+        Temporary Settings
+    ==============================*/
+
+    "cSpell.userWords": ["Marzuk", "Zarir"]
+}
